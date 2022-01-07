@@ -11,10 +11,11 @@ public class ViewAccount {
         ControllerAccount controllerAccount = new ControllerAccount();
 
         while (true) {
-            System.out.println(" $$ $$ $$ $$ $$ $$ $$ $$ $$ $$ $$ $$ $$ $$");
-            System.out.println(" $$           1. Login                  $$ ");
-            System.out.println(" $$           2. SignUp                 $$ ");
-            System.out.println(" $$ $$ $$ $$ $$ $$ $$ $$ $$ $$ $$ $$ $$ $$");
+            System.out.println("       WELCOME TO MANAGER STAFF APP       ");
+            System.out.println(" +++++++++++++++++++++++++++++++++++++++++");
+            System.out.println(" ++           1. Login                  ++ ");
+            System.out.println(" ++           2. SignUp                 ++");
+            System.out.println(" +++++++++++++++++++++++++++++++++++++++++");
 
             System.out.println("input your choice: ");
             int choice = 0;

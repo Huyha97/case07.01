@@ -13,26 +13,28 @@ import java.util.Scanner;
 public class ViewStaff {
     static Scanner scanner = new Scanner(System.in);
     private static List<Staff> staffList = new ArrayList<>();
+
     public static int menuManagerAdmin() {
         ControllerAccount controllerAccount = new ControllerAccount();
         ControllerStaff controllerStaff = new ControllerStaff();
 
         while (true) {
-            System.err.println("                            WELCOME BOSS !!!                                                        ");
-            System.out.println("        1. Edit Account                                                              ");
-            System.out.println("        2. Delete Account                                                            ");
-            System.out.println("        3. Display all Account                                                       ");
-            System.out.println("        4. Display Staff                                                                  ");
-            System.out.println("        5. Add staff                                                                ");
-            System.out.println("        6. Search Staff                                                                           ");
-            System.out.println("        7. Edit Staff                                                                           ");
-            System.out.println("        8. Delete Staff                                                                           ");
-            System.out.println("        9. Check staff status by name                                                                      ");
-            System.out.println("        10. Change staff working status   (fire or re-hire  )                                                                           ");
-            System.out.println("        11. Calculate staff salary                                     ");
-            System.out.println("        12. Calssify staff                                             ");
-            System.out.println("        13.Check staff status ( still working or had quit )           ");
-            System.out.println("        0. Log Out                                                    ");
+            System.err.println("++++++++++++++++++++++++++++WELCOME BOSS++++++++++++++++++++++++++++");
+            System.out.println("||        1. Edit Account                                         ||");
+            System.out.println("||        2. Delete Account                                       ||");
+            System.out.println("||        3. Display all Account                                  ||");
+            System.out.println("||        4. Display Staff                                        ||");
+            System.out.println("||        5. Add staff                                            ||");
+            System.out.println("||        6. Search Staff                                         ||");
+            System.out.println("||        7. Edit Staff                                           ||");
+            System.out.println("||        8. Delete Staff                                         ||");
+            System.out.println("||        9. Check staff status by name                           ||");
+            System.out.println("||        10. Change staff working status   (fire or re-hire  )   ||");
+            System.out.println("||        11. Calculate staff salary                              ||");
+            System.out.println("||        12. Calssify staff                                      ||");
+            System.out.println("||        13.Check staff status ( still working or had quit )     ||");
+            System.out.println("||        0. Log Out                                              ||");
+            System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
             System.out.println("input your choice: ");
             int choice = 0;
             try {
@@ -69,10 +71,13 @@ public class ViewStaff {
                 case 5:
                     System.out.println(" $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $");
                     System.out.println(" $      what kind of staff you want add?             $");
-                    System.out.println(" $                                                   $");
+                    System.out.println(" $===================================================$");
                     System.out.println(" $          1.  Full Time staff                      $");
+                    System.out.println(" $++++++++++++++++++++++++++++++++++++++++++++++++++ $");
                     System.out.println(" $          2.  Part Time staff                      $");
+                    System.out.println(" $++++++++++++++++++++++++++++++++++++++++++++++++++ $");
                     System.out.println(" $          3. Return Memu                           $");
+                    System.out.println(" $++++++++++++++++++++++++++++++++++++++++++++++++++ $");
                     System.out.println(" $          4. Log out                               $");
                     System.out.println(" $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $");
                     System.out.println("INPUT YOUR CHOICE");
@@ -93,7 +98,7 @@ public class ViewStaff {
                             controllerStaff.add(controllerStaff.addStaff(false));
                             break;
                         case 3:
-                            menuManagerStaff();
+                          menuManagerAdmin();
                             break;
                         case 4:
                             ViewAccount.menuSignInAndSignUp();
@@ -135,7 +140,7 @@ public class ViewStaff {
                     controllerStaff.checkStatus();
                     break;
                 case 0:
-                    System.out.println("GoodBye and See");
+                    System.out.println("GoodBye and See You Again!!!");
                     ViewAccount.menuSignInAndSignUp();
                     break;
             }
@@ -146,46 +151,36 @@ public class ViewStaff {
         ControllerStaff controllerStaff = new ControllerStaff();
         ControllerAccount controllerAccount = new ControllerAccount();
         while (true) {
-                    System.out.println("㊊ ㊋ ㊎ ㊏ ㊐ ㊑ ㊐ ㊑ ㊒ ㊓ ㊔ ㊕ ㊖ ㊗ ㊘ ㊜ ㊝ ㊊ ㊋");
-                    System.out.println("        STAFF INFOR'S                                           ");
-                    System.out.println("       1. Personal Infomation                                              ");
-                    System.out.println("       2. Calculate salary                                           ");
-                    System.out.println("       3. Update personal infomation                                       ");
-                    System.out.println("       0. Log Out                                                    ");
-                    System.out.println("㊊ ㊋ ㊎ ㊏ ㊐ ㊑ ㊒ ㊓ ㊔ ㊗ ㊘ ㊜ ㊝ ㊗ ㊘ ㊜ ㊝ ㊊ ㊋");
-                    System.out.println("Input your choice: ");
-                    int choice = 0;
-                    try {
-                        choice = Integer.parseInt(scanner.nextLine());
-                        if (choice != 1 && choice != 2 && choice != 0 && choice != 3) {
-                            System.err.println("only choose0, 1,2 or 3, guy!!!");
-                            return menuManagerStaff();
-                        }
-                    } catch (Exception e) {
-                        System.err.println("No chacracter, please!!!");
-                        return menuManagerStaff();
-                    }
-                    switch (choice) {
-                        case 1:
-                            controllerStaff.searchStaff();
-                            break;
-                        case 2:
-                            controllerStaff.payRoll();
-                            break;
-                        case 3:
-                            System.out.println("which staff you want edit? ");
-                            int index1 = controllerStaff.findIndex();
-                            if (index1 != -1) {
-                                if (controllerStaff.findAll().get(index1) instanceof StaffFullTime) {
-                                    controllerStaff.edit(index1, controllerStaff.updateStaff(true, index1));
-                                } else {
-                                    controllerStaff.edit(index1, controllerStaff.updateStaff(false, index1));
-                                }
-                            }
-                        case 0:
-                            ViewAccount.menuSignInAndSignUp();
-                            break;
-                    }
+            System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++");
+            System.out.println("+        STAFF INFOR'S                              +");
+            System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++");
+            System.out.println("+       1. Personal Infomation                      +");
+            System.out.println("+       2. Calculate salary                         +");
+            System.out.println("+       0. Log Out                                  +");
+            System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++");
+            System.out.println("Input your choice: ");
+            int choice = 0;
+            try {
+                choice = Integer.parseInt(scanner.nextLine());
+                if (choice != 1 && choice != 2 && choice != 0 && choice != 3) {
+                    System.err.println("only choose0, 1,2 or 3, guy!!!");
+                    return menuManagerStaff();
                 }
+            } catch (Exception e) {
+                System.err.println("No chacracter, please!!!");
+                return menuManagerStaff();
+            }
+            switch (choice) {
+                case 1:
+                    controllerStaff.searchStaff();
+                    break;
+                case 2:
+                    controllerStaff.payRoll();
+                    break;
+                case 0:
+                    ViewAccount.menuSignInAndSignUp();
+                    break;
             }
         }
+    }
+}

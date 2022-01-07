@@ -28,9 +28,9 @@ public class ControllerAccount {
                 break;
             } else {
                 System.err.println("YOUR USERNAME MUST HAS:\n" +
-                        "1) Username must be 8 to 20 characters in length\n" +
-                        "2) Username can only contain alphanumeric characters, numbers, underscore (_) and dot (.)\n" +
-                        "3) Username cannot start with underscore and dot");
+                        " Username must be 8 to 20 characters in length\n" +
+                        " Username can only contain alphanumeric characters, numbers, underscore (_) and dot (.)\n" +
+                        " Username cannot start with underscore and dot");
             }
         }
 
@@ -43,11 +43,11 @@ public class ControllerAccount {
                 break;
             } else {
                 System.err.println("YOUR PASSWORD MUST HAS:\n" +
-                        "1. At least 8 chars\n" +
-                        "2. Contains at least one digit\n" +
-                        "3. Contains at least one lower alpha char and one upper alpha char\n" +
-                        "4. Contains at least one char within a set of special chars (@#%$^ etc.)\n" +
-                        "5. Does not contain space, tab, etc.");
+                        " At least 8 chars\n" +
+                        " Contains at least one digit\n" +
+                        " Contains at least one lower alpha char and one upper alpha char\n" +
+                        " Contains at least one char within a set of special chars (@#%$^ etc.)\n" +
+                        " Does not contain space, tab, etc.");
             }
         }
         return new Account(userName, passWord);
@@ -149,25 +149,4 @@ public class ControllerAccount {
         return new Account(userName, passWord);
     }
 
-//    public void searchAccount() {
-//        System.out.println("input your password ");
-//        String passWord = scanner.nextLine();
-//        int index = -1;
-//        boolean check = false;
-//        for (int i = 0; i < accountlist.size(); i++) {
-//            if (passWord.contains(accountlist.get(i).getPassWord())) {
-//                check = true;
-//                index = accountlist.indexOf(accountlist.get(i));
-//            }
-//        }
-//        if (check) {
-//            System.out.println();
-//
-//
-//            }
-//        } else {
-//            System.err.println(" wrong!!!");
-//            searchAccount();
-//        }
-//    }
 }

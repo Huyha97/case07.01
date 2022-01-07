@@ -55,6 +55,6 @@ public class StaffPartTime extends Staff {
         return super.toString() + "," +
                 "Staff PartTime" + "," +
                 workingTimeOnMonth + "," +
-                formatter.format(salaryOnHour)+" VNĐ";
+                salaryOnHour+" VNĐ";
     }
 }

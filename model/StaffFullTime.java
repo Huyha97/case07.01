@@ -53,6 +53,6 @@ public class StaffFullTime extends Staff {
         return super.toString() + "," +
                 "Staff FullTime" + "," +
                 workingTimeOnMonth + "," +
-                formatter.format(salaryOnHour)+" VNĐ";
+               salaryOnHour+" VNĐ";
     }
 }
