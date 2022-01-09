@@ -27,13 +27,15 @@ public class ControllerAccount {
             if (pattern.matcher(userName).find()) {
                 break;
             } else {
-                System.err.println("YOUR USERNAME MUST HAS:\n" +
-                        " Username must be 8 to 20 characters in length\n" +
-                        " Username can only contain alphanumeric characters, numbers, underscore (_) and dot (.)\n" +
-                        " Username cannot start with underscore and dot");
+                System.err.println(
+                                "===========================================================================================\n" +
+                                "|| YOUR USERNAME MUST HAS:                                                                 ||\n" +
+                                "|| Username must be 8 to 20 characters in length                                           ||\n" +
+                                "|| Username can only contain alphanumeric characters, numbers, underscore (_) and dot (.)  ||\n" +
+                                "|| Username cannot start with underscore and dot                                           ||\n" +
+                                "============================================================================================\n");
             }
         }
-
         String passWord;
         while (true) {
             System.out.println("Input PassWord:");
@@ -42,15 +44,19 @@ public class ControllerAccount {
             if (pattern.matcher(passWord).find()) {
                 break;
             } else {
-                System.err.println("YOUR PASSWORD MUST HAS:\n" +
-                        " At least 8 chars\n" +
-                        " Contains at least one digit\n" +
-                        " Contains at least one lower alpha char and one upper alpha char\n" +
-                        " Contains at least one char within a set of special chars (@#%$^ etc.)\n" +
-                        " Does not contain space, tab, etc.");
+                System.err.println(
+                                "==========================================================================================\n" +
+                                "||    YOUR PASSWORD MUST HAS:                                                            ||\n" +
+                                "|| At least 8 chars                                                                      ||\n" +
+                                "|| Contains at least one digit                                                           ||\n" +
+                                "|| Contains at least one lower alpha char and one upper alpha char                       ||\n" +
+                                "||Contains at least one char within a set of special chars (@#%$^ etc.)                  ||\n" +
+                                "|| Does not contain space, tab, etc.                                                     ||\n" +
+                                "==========================================================================================");
             }
         }
         return new Account(userName, passWord);
+
     }
 
     public Account signInAdmin() {
@@ -119,7 +125,9 @@ public class ControllerAccount {
             accountlist.remove(index);
             System.out.println("DELETE SUCCESS!!");
         } else {
-            System.err.println("THIS ACCOUNT DOES NOT EXIT !!!");
+            System.err.println("====================================");
+            System.err.println("|  THIS ACCOUNT DOES NOT EXIT !!!   |");
+            System.err.println("====================================");
             deleteAccount();
         }
         ReadAndWriteAccount.writeAccount(accountlist);

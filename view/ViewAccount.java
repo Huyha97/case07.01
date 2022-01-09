@@ -26,7 +26,9 @@ public class ViewAccount {
                     menuSignInAndSignUp();
                 }
             } catch (Exception e) {
-                System.err.println("TRY AGAIN!!!");
+                System.err.println("=================");
+                System.err.println("|  TRY AGAIN!!!  |");
+                System.err.println("=================");
             }
             switch (choice) {
                 case 1:
@@ -38,12 +40,14 @@ public class ViewAccount {
                         ViewStaff.menuManagerStaff();
                         break;
                     } else {
-                        System.err.println("your account or password incorrect, try again!!!");
+                        System.err.println("====================================================");
+                        System.err.println("| your account or password incorrect, try again!!!  |");
+                        System.err.println("====================================================");
                         menuSignInAndSignUp();
                     }
                 case 2:
                     controllerAccount.addAccount(controllerAccount.signUpAccount());
-                    System.out.println("SIGN UP SUCCESS!!!");
+                    System.out.println("<| SIGN UP SUCCESS!!! |>");
                     break;
             }
         }

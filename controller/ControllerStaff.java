@@ -118,7 +118,9 @@ public class ControllerStaff implements Manager {
                     line[0], line[1], line[2], line[3], line[4], line[5], line[6], line[7]);
             System.out.println("");
         } else {
-            System.err.println("this staff does not exit!!!");
+            System.err.println("===============================");
+            System.err.println("| this staff does not exit!!!  |");
+            System.err.println("===============================");
             searchStaff();
         }
     }
@@ -152,7 +154,9 @@ public class ControllerStaff implements Manager {
                 checkStatus();
             }
         } catch (Exception e) {
-            System.err.println("try again!!!");
+            System.err.println("=================");
+            System.err.println("|  TRY AGAIN!!!  |");
+            System.err.println("=================");
         }
         switch (choice) {
             case 1:
@@ -199,7 +203,9 @@ public class ControllerStaff implements Manager {
             System.out.println("");
             ReadAndWriteStaff.writeStaff(staffList);
         } else {
-            System.err.println("this staff dose not exit!!!");
+            System.err.println("===============================");
+            System.err.println("| this staff does not exit!!!  |");
+            System.err.println("===============================");
         }
     }
 
@@ -220,7 +226,9 @@ public class ControllerStaff implements Manager {
             if (pattern.matcher(name).find()) {
                 break;
             } else {
-                System.err.println("Invalid!!!");
+                System.err.println("==============");
+                System.err.println("| Invalid!!!  |");
+                System.err.println("==============");
             }
         }
 
@@ -233,12 +241,18 @@ public class ControllerStaff implements Manager {
                 if (age >= 18 && age <= 60) {
                     check = false;
                 } else if (age < 18) {
-                    System.err.println("you are to young, try again NOW!!!>");
+                    System.err.println("========================================");
+                    System.err.println("|              to yooung!!! |>|>|>      |");
+                    System.err.println("========================================");
                 } else {
-                    System.err.println("you are too old");
+                    System.err.println("========================================");
+                    System.err.println("|               to old!!! |>|>|>       |");
+                    System.err.println("========================================");
                 }
             } catch (Exception e) {
-                System.err.println("Invalid!!!");
+                System.err.println("==============");
+                System.err.println("| Invalid!!!  |");
+                System.err.println("==============");
             }
         }
 
@@ -250,7 +264,9 @@ public class ControllerStaff implements Manager {
             if (pattern.matcher(address).find()) {
                 break;
             } else {
-                System.err.println("invalid!!");
+                System.err.println("==============");
+                System.err.println("| Invalid!!!  |");
+                System.err.println("==============");
             }
         }
 
@@ -269,7 +285,9 @@ public class ControllerStaff implements Manager {
                         System.err.println("working over 208hours can damage your heath!!!");
                     }
                 } catch (Exception e) {
-                    System.err.println("try again!!!");
+                    System.err.println("=================");
+                    System.err.println("|  TRY AGAIN!!!  |");
+                    System.err.println("=================");
                 }
             }
 
@@ -285,7 +303,9 @@ public class ControllerStaff implements Manager {
                         System.err.println("the salary min is 40000vnd");
                     }
                 } catch (Exception e) {
-                    System.err.println("invalid!!!");
+                    System.err.println("==============");
+                    System.err.println("| Invalid!!!  |");
+                    System.err.println("==============");
                 }
             }
 
@@ -305,7 +325,9 @@ public class ControllerStaff implements Manager {
                         System.err.println("if do a partime job over 104h, you should transfer to fulltime job!!!");
                     }
                 } catch (Exception e) {
-                    System.err.println("invalid!!!");
+                    System.err.println("==============");
+                    System.err.println("| Invalid!!!  |");
+                    System.err.println("==============");
                 }
             }
 
@@ -321,7 +343,9 @@ public class ControllerStaff implements Manager {
                         System.err.println("the salary min is 30.000vnd");
                     }
                 } catch (Exception e) {
-                    System.err.println("invalid!!!");
+                    System.err.println("==============");
+                    System.err.println("| Invalid!!!  |");
+                    System.err.println("==============");
                 }
             }
 
@@ -344,7 +368,9 @@ public class ControllerStaff implements Manager {
             if (pattern.matcher(name).find()) {
                 break;
             } else {
-                System.err.println("Invalid");
+                System.err.println("==============");
+                System.err.println("| Invalid!!!  |");
+                System.err.println("==============");
             }
         }
 
@@ -362,7 +388,9 @@ public class ControllerStaff implements Manager {
                     System.err.println("you are too old");
                 }
             } catch (Exception e) {
-                System.err.println("Invalid!!!");
+                System.err.println("==============");
+                System.err.println("| Invalid!!!  |");
+                System.err.println("==============");
             }
         }
 
@@ -374,7 +402,9 @@ public class ControllerStaff implements Manager {
             if (pattern.matcher(address).find()) {
                 break;
             } else {
-                System.err.println("Invalid");
+                System.err.println("==============");
+                System.err.println("| Invalid!!!  |");
+                System.err.println("==============");
             }
         }
 
@@ -393,7 +423,9 @@ public class ControllerStaff implements Manager {
                         System.err.println("working over 200h can demage your heath!!!");
                     }
                 } catch (Exception e) {
-                    System.err.println("invalid");
+                    System.err.println("==============");
+                    System.err.println("| Invalid!!!  |");
+                    System.err.println("==============");
                 }
             }
 //here
@@ -409,7 +441,9 @@ public class ControllerStaff implements Manager {
                         System.err.println("the salary min is 40000vnd");
                     }
                 } catch (Exception e) {
-                    System.err.println("invalid!!!");
+                    System.err.println("==============");
+                    System.err.println("| Invalid!!!  |");
+                    System.err.println("==============");
                 }
             }
 //here
@@ -429,7 +463,9 @@ public class ControllerStaff implements Manager {
                         System.err.println("you work to muchhh");
                     }
                 } catch (Exception e) {
-                    System.err.println("invalid");
+                    System.err.println("==============");
+                    System.err.println("| Invalid!!!  |");
+                    System.err.println("==============");
                 }
             }
 
@@ -445,7 +481,9 @@ public class ControllerStaff implements Manager {
                         System.err.println("Minimum part-time salary is 30.000VNĐ");
                     }
                 } catch (Exception e) {
-                    System.err.println("Invalid");
+                    System.err.println("==============");
+                    System.err.println("| Invalid!!!  |");
+                    System.err.println("==============");
                 }
             }
 
@@ -476,12 +514,16 @@ public class ControllerStaff implements Manager {
                     System.out.println("deleted!!!");
                     System.out.println("");
                 } else {
-                    System.err.println("this staff dose not exit!!!");
+                    System.err.println("===============================");
+                    System.err.println("| this staff does not exit!!!  |");
+                    System.err.println("===============================");
                     deleteStaff();
                 }
                 break;
             } else {
-                System.err.println("Try again!!!");
+                System.err.println("=================");
+                System.err.println("|  TRY AGAIN!!!  |");
+                System.err.println("=================");
             }
         }
         ReadAndWriteStaff.writeStaff(staffList);
@@ -549,7 +591,9 @@ public class ControllerStaff implements Manager {
                 employeeClassification();
             }
         } catch (Exception e) {
-            System.err.println("try again!!!");
+            System.err.println("=================");
+            System.err.println("|  TRY AGAIN!!!  |");
+            System.err.println("=================");
         }
         switch (choice) {
             case 1:

@@ -32,7 +32,7 @@ public class ViewStaff {
             System.out.println("||        10. Change staff working status   (fire or re-hire  )   ||");
             System.out.println("||        11. Calculate staff salary                              ||");
             System.out.println("||        12. Calssify staff                                      ||");
-            System.out.println("||        13.Check staff status ( still working or had quit )     ||");
+            System.out.println("||        13.Checklist staff status                               ||");
             System.out.println("||        0. Log Out                                              ||");
             System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
             System.out.println("input your choice: ");
@@ -56,7 +56,9 @@ public class ViewStaff {
                     if (index > -1) {
                         controllerAccount.edit(index, controllerAccount.updateAccount());
                     } else {
-                        System.err.println("try again, this account dose not exit !!!");
+                        System.err.println("=============================================");
+                        System.err.println("||try again, this account dose not exit !!! ||");
+                        System.err.println("=============================================");
                     }
                     break;
                 case 2:
@@ -85,10 +87,14 @@ public class ViewStaff {
                     try {
                         choice1 = Integer.parseInt(scanner.nextLine());
                         if (choice1 != 1 && choice1 != 2 && choice1 != 3 && choice1 != 4) {
-                            System.err.println("try again !!!");
+                            System.err.println("=====================");
+                            System.err.println("||   TRY AGAIN!!!   ||");
+                            System.err.println("=====================");
                         }
                     } catch (Exception e) {
-                        System.err.println("try again!!!");
+                        System.err.println("=====================");
+                        System.err.println("||   TRY AGAIN!!!   ||");
+                        System.err.println("=====================");
                     }
                     switch (choice1) {
                         case 1:
@@ -118,7 +124,9 @@ public class ViewStaff {
                             controllerStaff.edit(index1, controllerStaff.updateStaff(false, index1));
                         }
                     } else {
-                        System.err.println("we do not have these staff !!!");
+                        System.err.println("====================================");
+                        System.err.println("|| we do not have these staff !!!  ||");
+                        System.err.println("====================================");
                     }
                     break;
                 case 8:
@@ -140,7 +148,9 @@ public class ViewStaff {
                     controllerStaff.checkStatus();
                     break;
                 case 0:
-                    System.out.println("GoodBye and See You Again!!!");
+                    System.out.println("=====================================");
+                    System.out.println("||GoodBye Boss, have a nice day !!! ||");
+                    System.out.println("=====================================");
                     ViewAccount.menuSignInAndSignUp();
                     break;
             }
@@ -162,8 +172,8 @@ public class ViewStaff {
             int choice = 0;
             try {
                 choice = Integer.parseInt(scanner.nextLine());
-                if (choice != 1 && choice != 2 && choice != 0 && choice != 3) {
-                    System.err.println("only choose0, 1,2 or 3, guy!!!");
+                if (choice != 1 && choice != 2 && choice != 0 ) {
+                    System.err.println("only choose 0, 1, 2 boy!!!");
                     return menuManagerStaff();
                 }
             } catch (Exception e) {
